@@ -1,13 +1,19 @@
 /* eslint-disable no-undef */
 let exphbs  = require('express-handlebars');
 let express = require('express');
-let app = express();
+const path = require('path');
+// eslint-disable-next-line no-unused-vars
+const hbs = require('hbs');
+const app = express();
 const bodyParser = require('body-parser');
 
 
 
-app.engine('.hbs', exphbs.engine({ extname: '.handlebars', defaultLayout: "main"}));
-app.set('view engine', 'handlebars');
+app.engine('.handlebars', 
+exphbs.engine({ extname: '.handlebars', 
+defaultLayout: "main"}));
+app.set('views', path.join(__dirname))
+app.set('view engine', 'hbs');
 //parse application/json
 app.use(bodyParser.json());
 
@@ -18,13 +24,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('public'));      
 
 app.get('/', function (req, res) {
-  res.render('LeaveReq');
+  res.render('main');
 });
-
-app.get('/all', function (req, res) {
-  res.render('LeaveList');
-});
-
 
 let PORT = process.env.PORT || 4001;
 
