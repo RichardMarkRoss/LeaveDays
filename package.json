@@ -17,13 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RichardMarkRoss/LeaveDays.git"
+    "url": "git+https://github.com/RichardMarkRoss/leavedays.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RichardMarkRoss/LeaveDays/issues"
+    "url": "https://github.com/RichardMarkRoss/leavedays/issues"
   },
-  "homepage": "https://github.com/RichardMarkRoss/LeaveDays#readme"
+  "homepage": "https://github.com/RichardMarkRoss/leavedays#readme"
 }
